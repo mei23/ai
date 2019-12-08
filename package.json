@@ -28,7 +28,7 @@
     "random-seed": "0.3.0",
     "reconnecting-websocket": "4.1.10",
     "request": "2.88.0",
-    "request-promise-native": "1.0.7",
+    "request-promise-native": "1.0.8",
     "seedrandom": "2.4.3",
     "timeout-as-promise": "1.0.0",
     "ts-node": "8.0.3",
