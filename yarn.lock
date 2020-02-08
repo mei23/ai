@@ -80,12 +80,10 @@
   resolved "https://registry.yarnpkg.com/@types/tough-cookie/-/tough-cookie-2.3.5.tgz#9da44ed75571999b65c37b60c9b2b88db54c585d"
   integrity sha512-SCcK7mvGi3+ZNz833RRjFIxrn4gI1PPR3NtuIS+6vMkvmsGjosqTJwRt5bAEFLRz+wtJMWv8+uOnZf2hi2QXTg==
 
-"@types/uuid@3.4.6":
-  version "3.4.6"
-  resolved "https://registry.yarnpkg.com/@types/uuid/-/uuid-3.4.6.tgz#d2c4c48eb85a757bf2927f75f939942d521e3016"
-  integrity sha512-cCdlC/1kGEZdEglzOieLDYBxHsvEOIg7kp/2FYyVR9Pxakq+Qf/inL3RKQ+PA8gOlI/NnL+fXmQH12nwcGzsHw==
-  dependencies:
-    "@types/node" "*"
+"@types/uuid@3.4.7":
+  version "3.4.7"
+  resolved "https://registry.yarnpkg.com/@types/uuid/-/uuid-3.4.7.tgz#51d42247473bc00e38cc8dfaf70d936842a36c03"
+  integrity sha512-C2j2FWgQkF1ru12SjZJyMaTPxs/f6n90+5G5qNakBxKXjTBc/YTSelHh4Pz1HUDwxFXD9WvpQhOGCDC+/Y4mIQ==
 
 "@types/ws@7.2.1":
   version "7.2.1"
