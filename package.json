@@ -27,7 +27,7 @@
     "promise-retry": "1.1.1",
     "random-seed": "0.3.0",
     "reconnecting-websocket": "4.4.0",
-    "request": "2.88.0",
+    "request": "2.88.2",
     "request-promise-native": "1.0.8",
     "seedrandom": "3.0.5",
     "timeout-as-promise": "1.0.0",
