@@ -18,7 +18,7 @@
     "@types/random-seed": "0.3.3",
     "@types/seedrandom": "2.4.28",
     "@types/uuid": "8.0.0",
-    "@types/ws": "7.2.5",
+    "@types/ws": "7.2.6",
     "autobind-decorator": "2.4.0",
     "canvas": "2.6.1",
     "chalk": "4.1.0",
