@@ -22,7 +22,7 @@
     "autobind-decorator": "2.4.0",
     "canvas": "2.6.1",
     "chalk": "4.1.0",
-    "lokijs": "1.5.8",
+    "lokijs": "1.5.9",
     "mecab-async": "0.1.2",
     "misskey-reversi": "0.0.5",
     "node-fetch": "2.6.0",
