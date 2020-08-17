@@ -103,7 +103,16 @@ export default class Stream extends EventEmitter {
 	 */
 	@autobind
 	private onMessage(message) {
-		const { type, body } = JSON.parse(message.data);
+		let type: any = undefined;
+		let body: any = undefined;
+
+		try {
+			const data = JSON.parse(message.data);
+			type = data.type;
+			body = data.body;
+		} catch {
+			return;
+		}
 
 		if (type == 'channel') {
 			const id = body.id;
@@ -143,6 +152,12 @@ export default class Stream extends EventEmitter {
 		}
 
 		this.stream.send(JSON.stringify(data));
+	}
+
+	@autobind
+	public rawSend(str: string) {
+		// sendで送ると `"ping"`みたいにダブルクオート付きになってしまうため　
+		this.stream.send(str);
 	}
 
 	@autobind
