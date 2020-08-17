@@ -376,10 +376,10 @@ lodash@^4.17.20:
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
   integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
 
-lokijs@1.5.9:
-  version "1.5.9"
-  resolved "https://registry.yarnpkg.com/lokijs/-/lokijs-1.5.9.tgz#1ddfce84eb418a9907f5a17f026123c1099c73a1"
-  integrity sha512-Ye9jYrDnGMKumFLq048Y3x6hILRPQQevbGLnChhRR1hZlCiAoVIP9SQUqcL5KSvMXedXzfSIuR1JjO3XOeENmQ==
+lokijs@1.5.10:
+  version "1.5.10"
+  resolved "https://registry.yarnpkg.com/lokijs/-/lokijs-1.5.10.tgz#57d729b2694882b4b235c5b34ad3e3831ba4521b"
+  integrity sha512-XUCpwfR0cL2WJZECy80rGmDve9MCDVYFZqPGATSHCh0L+qocsPww3VB20d3Pvl0QpSBzWConCZyb6Ov8lzXoPA==
 
 make-error@^1.1.1:
   version "1.3.5"
