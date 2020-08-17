@@ -6,8 +6,7 @@
     "build": "tsc"
   },
   "resolutions": {
-		"lodash": "^4.17.13",
-		"needle": "^2.5.0"
+		"lodash": "^4.17.20"
   },
   "dependencies": {
     "@types/chalk": "2.2.0",
