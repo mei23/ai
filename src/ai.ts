@@ -118,7 +118,6 @@ export default class 藍 {
 		this.connection = new Stream();
 
 		setInterval(() => {
-			this.log('Test API request to stream');
 			this.connection.rawSend('ping');
 		}, 10 * 60 * 1000);
 
