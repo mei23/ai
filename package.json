@@ -25,7 +25,7 @@
     "lokijs": "1.5.11",
     "mecab-async": "0.1.2",
     "misskey-reversi": "0.0.5",
-    "node-fetch": "2.6.0",
+    "node-fetch": "2.6.1",
     "promise-retry": "2.0.1",
     "random-seed": "0.3.0",
     "reconnecting-websocket": "4.4.0",
