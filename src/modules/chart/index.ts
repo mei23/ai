@@ -1,10 +1,10 @@
 import autobind from 'autobind-decorator';
-import Module from '../../module';
-import serifs from '../../serifs';
-import Message from '../../message';
+import Module from '@/module';
+import serifs from '@/serifs';
+import Message from '@/message';
 import { renderChart } from './render-chart';
-import { items } from '../../vocabulary';
-import config from '../../config';
+import { items } from '@/vocabulary';
+import config from '@/config';
 
 export default class extends Module {
 	public readonly name = 'chart';

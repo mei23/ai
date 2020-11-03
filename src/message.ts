@@ -2,12 +2,12 @@ import autobind from 'autobind-decorator';
 import * as chalk from 'chalk';
 const delay = require('timeout-as-promise');
 
-import 藍 from './ai';
-import Friend from './friend';
-import { User } from './misskey/user';
-import includes from './utils/includes';
-import or from './utils/or';
-import config from './config';
+import 藍 from '@/ai';
+import Friend from '@/friend';
+import { User } from '@/misskey/user';
+import includes from '@/utils/includes';
+import or from '@/utils/or';
+import config from '@/config';
 
 export default class Message {
 	private ai: 藍;
@@ -30,6 +30,13 @@ export default class Message {
 		return this.messageOrNote.text;
 	}
 
+	public get quoteId(): string | null {
+		return this.messageOrNote.renoteId;
+	}
+
+	/**
+	 * メンション部分を除いたテキスト本文
+	 */
 	public get extractedText(): string {
 		const host = new URL(config.host).host.replace(/\./g, '\\.');
 		return this.text

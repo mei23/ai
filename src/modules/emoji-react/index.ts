@@ -1,10 +1,11 @@
 import autobind from 'autobind-decorator';
 import { parse } from 'twemoji-parser';
+const delay = require('timeout-as-promise');
 
-import { Note } from '../../misskey/note';
-import Module from '../../module';
-import Stream from '../../stream';
-import includes from '../../utils/includes';
+import { Note } from '@/misskey/note';
+import Module from '@/module';
+import Stream from '@/stream';
+import includes from '@/utils/includes';
 
 export default class extends Module {
 	public readonly name = 'emoji-react';
@@ -25,13 +26,14 @@ export default class extends Module {
 		if (note.text == null) return;
 		if (note.text.includes('@')) return; // (自分または他人問わず)メンションっぽかったらreject
 
-		const react = (reaction: string) => {
-			setTimeout(() => {
-				this.ai.api('notes/reactions/create', {
-					noteId: note.id,
-					reaction: reaction
-				});
-			}, 1500);
+		const react = async (reaction: string, immediate = false) => {
+			if (!immediate) {
+				await delay(1500);
+			}
+			this.ai.api('notes/reactions/create', {
+				noteId: note.id,
+				reaction: reaction
+			});
 		};
 
 		const customEmojis = note.text.match(/:([\w@.-]+):(?!\w)/g);

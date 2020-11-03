@@ -7,10 +7,12 @@
  */
 
 import fetch from 'node-fetch';
+import 'module-alias/register';
+
 import Reversi, { Color } from 'misskey-reversi';
-import config from '../../config';
-import serifs from '../../serifs';
-import { User } from '../../misskey/user';
+import config from '@/config';
+import serifs from '@/serifs';
+import { User } from '@/misskey/user';
 
 const db = {};
 

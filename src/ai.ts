@@ -9,21 +9,22 @@ import * as chalk from 'chalk';
 import { v4 as uuid } from 'uuid';
 const delay = require('timeout-as-promise');
 
-import config from './config';
-import Module from './module';
-import Message from './message';
-import Friend, { FriendDoc } from './friend';
-import { User } from './misskey/user';
-import Stream from './stream';
-import log from './utils/log';
+import config from '@/config';
+import Module from '@/module';
+import Message from '@/message';
+import Friend, { FriendDoc } from '@/friend';
+import { User } from '@/misskey/user';
+import Stream from '@/stream';
+import log from '@/utils/log';
 const pkg = require('../package.json');
 
 type MentionHook = (msg: Message) => Promise<boolean | HandlerResult>;
-type ContextHook = (msg: Message, data?: any) => Promise<void | HandlerResult>;
+type ContextHook = (key: any, msg: Message, data?: any) => Promise<void | boolean | HandlerResult>;
 type TimeoutCallback = (data?: any) => void;
 
 export type HandlerResult = {
-	reaction: string | null;
+	reaction?: string | null;
+	immediate?: boolean;
 };
 
 export type InstallerResult = {
@@ -81,9 +82,11 @@ export default class 藍 {
 		this.account = account;
 		this.modules = modules;
 
-		this.log('Lodaing the memory...');
+		const file = process.env.NODE_ENV === 'test' ? 'test.memory.json' : 'memory.json';
 
-		this.db = new loki('memory.json', {
+		this.log(`Lodaing the memory from ${file}...`);
+
+		this.db = new loki(file, {
 			autoload: true,
 			autosave: true,
 			autosaveInterval: 1000,
@@ -224,18 +227,10 @@ export default class 藍 {
 		});
 
 		let reaction: string | null = 'love';
+		let immediate: boolean = false;
 
 		//#region
-		// コンテキストがあればコンテキストフック呼び出し
-		// なければそれぞれのモジュールについてフックが引っかかるまで呼び出し
-		if (context != null) {
-			const handler = this.contextHooks[context.module];
-			const res = await handler(msg, context.data);
-
-			if (res != null && typeof res === 'object') {
-				reaction = res.reaction;
-			}
-		} else {
+		const invokeMentionHooks = async () => {
 			let res: boolean | HandlerResult | null = null;
 
 			for (const handler of this.mentionHooks) {
@@ -244,12 +239,33 @@ export default class 藍 {
 			}
 
 			if (res != null && typeof res === 'object') {
-				reaction = res.reaction;
+				if (res.reaction != null) reaction = res.reaction;
+				if (res.immediate != null) immediate = res.immediate;
 			}
+		};
+
+		// コンテキストがあればコンテキストフック呼び出し
+		// なければそれぞれのモジュールについてフックが引っかかるまで呼び出し
+		if (context != null) {
+			const handler = this.contextHooks[context.module];
+			const res = await handler(context.key, msg, context.data);
+
+			if (res != null && typeof res === 'object') {
+				if (res.reaction != null) reaction = res.reaction;
+				if (res.immediate != null) immediate = res.immediate;
+			}
+
+			if (res === false) {
+				await invokeMentionHooks();
+			}
+		} else {
+			await invokeMentionHooks();
 		}
 		//#endregion
 
-		await delay(1000);
+		if (!immediate) {
+			await delay(1000);
+		}
 
 		if (msg.isDm) {
 			// 既読にする

@@ -1,9 +1,9 @@
 import autobind from 'autobind-decorator';
-import Module from '../../module';
-import Message from '../../message';
-import serifs from '../../serifs';
+import Module from '@/module';
+import Message from '@/message';
+import serifs from '@/serifs';
 import * as seedrandom from 'seedrandom';
-import { genItem } from '../../vocabulary';
+import { genItem } from '@/vocabulary';
 import * as loki from 'lokijs';
 import config from '../../config';
 

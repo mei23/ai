@@ -1,11 +1,11 @@
 import * as childProcess from 'child_process';
 import autobind from 'autobind-decorator';
-import Module from '../../module';
-import serifs from '../../serifs';
-import config from '../../config';
-import Message from '../../message';
-import Friend from '../../friend';
-import getDate from '../../utils/get-date';
+import Module from '@/module';
+import serifs from '@/serifs';
+import config from '@/config';
+import Message from '@/message';
+import Friend from '@/friend';
+import getDate from '@/utils/get-date';
 
 export default class extends Module {
 	public readonly name = 'reversi';

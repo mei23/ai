@@ -1,13 +1,13 @@
 import autobind from 'autobind-decorator';
 import * as loki from 'lokijs';
-import Module from '../../module';
-import Message from '../../message';
-import serifs from '../../serifs';
+import Module from '@/module';
+import Message from '@/message';
+import serifs from '@/serifs';
 
 type User = {
 	id: string;
 	username: string;
-	host: string;
+	host?: string | null;
 };
 
 type Game = {
@@ -100,7 +100,7 @@ export default class extends Module {
 	}
 
 	@autobind
-	private async contextHook(msg: Message) {
+	private async contextHook(key: any, msg: Message) {
 		if (msg.text == null) return {
 			reaction: 'hmm'
 		};

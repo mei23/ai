@@ -1,8 +1,8 @@
 import autobind from 'autobind-decorator';
-import Module from '../../module';
-import Message from '../../message';
-import serifs from '../../serifs';
-import { safeForInterpolate } from '../../utils/safe-for-interpolate';
+import Module from '@/module';
+import Message from '@/message';
+import serifs from '@/serifs';
+import { safeForInterpolate } from '@/utils/safe-for-interpolate';
 
 const titles = ['さん', 'くん', '君', 'ちゃん', '様', '先生'];
 
@@ -140,12 +140,12 @@ export default class extends Module {
 	}
 
 	@autobind
-	private async contextHook(msg: Message, data: any) {
+	private async contextHook(key: any, msg: Message, data: any) {
 		if (msg.text == null) return;
 
 		const done = () => {
 			msg.reply(serifs.core.setNameOk(msg.friend.name));
-			this.unsubscribeReply(msg.userId);
+			this.unsubscribeReply(key);
 		};
 
 		if (msg.text.includes('はい')) {

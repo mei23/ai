@@ -1,5 +1,7 @@
 // AiOS bootstrapper
 
+import 'module-alias/register';
+
 import 藍 from './ai';
 import config from './config';
 import _log from './utils/log';
@@ -28,6 +30,7 @@ import ChartModule from './modules/chart';
 import SleepReportModule from './modules/sleep-report';
 import NotingModule from './modules/noting';
 import PollModule from './modules/poll';
+import ReminderModule from './modules/reminder';
 
 import * as chalk from 'chalk';
 import fetch from 'node-fetch';
@@ -98,6 +101,7 @@ promiseRetry(retry => {
 		new SleepReportModule(),
 		new NotingModule(),
 		new PollModule(),
+		new ReminderModule(),
 	]);
 }).catch(e => {
 	log(chalk.red('Failed to fetch the account'));

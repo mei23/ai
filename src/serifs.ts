@@ -201,7 +201,7 @@ export default {
 		/**
 		 * 接待のつもりが勝ってしまったとき
 		 */
-		iWonButSettai: name => `(${name}に接待で勝ってしまいました...)`,
+		iWonButSettai: name => `(${name}に接待で勝っちゃいました...)`,
 
 		/**
 		 * 負けたとき
@@ -333,6 +333,31 @@ export default {
 		tooLong: '長すぎます…',
 
 		notify: (time, name) => name ? `${name}、${time}経ちましたよ！` : `${time}経ちましたよ！`
+	},
+
+	/**
+	 * リマインダー
+	 */
+	reminder: {
+		invalid: 'うーん...？',
+
+		reminds: 'やること一覧です！',
+
+		notify: (name) => name ? `${name}、これやりましたか？` : `これやりましたか？`,
+
+		notifyWithThing: (thing, name) => name ? `${name}、「${thing}」やりましたか？` : `「${thing}」やりましたか？`,
+
+		done: (name) => name ? [
+			`よく出来ました、${name}♪`,
+			`${name}、さすがですっ！`,
+			`${name}、えらすぎます...！`,
+		] : [
+			`よく出来ました♪`,
+			`さすがですっ！`,
+			`えらすぎます...！`,
+		],
+
+		cancel: `わかりました。`,
 	},
 
 	/**

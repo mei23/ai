@@ -95,6 +95,8 @@ export const itemPrefixes = [
 	'シュレディンガーの',
 	'分散型',
 	'卵かけ',
+	'次世代',
+	'帯電',
 ];
 
 export const items = [
@@ -246,6 +248,15 @@ export const items = [
 	'空気',
 	'RTX 3090',
 	'シャーペンの芯',
+	'ロゼッタストーン',
+	'CapsLockキー',
+	'虚無',
+	'UFO',
+	'NumLockキー',
+	'放射性廃棄物',
+	'火星',
+	'ウラン',
+	'遠心分離機',
 ];
 
 export const and = [
