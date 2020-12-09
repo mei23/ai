@@ -46,7 +46,7 @@
 		"koa": "2.13.0",
 		"koa-json-body": "5.3.0",
 		"ts-jest": "26.3.0",
-		"websocket": "1.0.32"
+		"websocket": "1.0.33"
 	},
 	"_moduleAliases": {
 		"@": "built"
