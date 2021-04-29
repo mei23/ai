@@ -1,0 +1,52 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 50
+  ignore:
+  - dependency-name: "@types/node"
+    versions:
+    - 14.14.22
+    - 14.14.24
+    - 14.14.25
+    - 14.14.28
+    - 14.14.30
+    - 14.14.31
+    - 14.14.32
+    - 14.14.33
+    - 14.14.34
+    - 14.14.35
+    - 14.14.36
+    - 14.14.39
+    - 14.14.41
+    - 15.0.0
+  - dependency-name: "@types/koa__router"
+    versions:
+    - 8.0.4
+  - dependency-name: "@types/node-fetch"
+    versions:
+    - 2.5.8
+  - dependency-name: "@types/jest"
+    versions:
+    - 26.0.20
+    - 26.0.21
+  - dependency-name: ts-jest
+    versions:
+    - 26.5.0
+    - 26.5.1
+    - 26.5.2
+    - 26.5.3
+  - dependency-name: typescript
+    versions:
+    - 4.1.4
+    - 4.2.2
+  - dependency-name: "@types/koa"
+    versions:
+    - 2.11.7
+    - 2.11.8
+    - 2.13.0
+  - dependency-name: ws
+    versions:
+    - 7.4.3
