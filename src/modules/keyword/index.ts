@@ -4,6 +4,7 @@ import Module from '@/module';
 import config from '@/config';
 import serifs from '@/serifs';
 import { mecab } from './mecab';
+import Message from '@/message';
 
 function kanaToHira(str: string) {
 	return str.replace(/[\u30a1-\u30f6]/g, match => {
@@ -30,7 +31,9 @@ export default class extends Module {
 
 		setInterval(this.learn, 1000 * 60 * (config.keywordInterval || 60));
 
-		return {};
+		return {
+			mentionHook: this.mentionHook,
+		};
 	}
 
 	@autobind
@@ -48,7 +51,7 @@ export default class extends Module {
 
 		for (const note of interestedNotes) {
 			const tokens = await mecab(note.text, config.mecab, config.mecabDic);
-			const keywordsInThisNote = tokens.filter(token => token[2] == '固有名詞' && token[8] != null);
+			const keywordsInThisNote = tokens.filter(token => token[1] == '名詞' && token[8] != null);
 			keywords = keywords.concat(keywordsInThisNote);
 		}
 
@@ -77,5 +80,18 @@ export default class extends Module {
 		this.ai.post({
 			text: text
 		});
+	}
+
+	@autobind
+	private async mentionHook(msg: Message) {
+		if (!msg.or(['/learn']) || msg.user.username !== config.master) {
+			return false;
+		} else {
+			this.log('Manualy learn requested');
+		}
+
+		this.learn();
+
+		return true;
 	}
 }
