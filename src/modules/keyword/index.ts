@@ -51,7 +51,7 @@ export default class extends Module {
 
 		for (const note of interestedNotes) {
 			const tokens = await mecab(note.text, config.mecab, config.mecabDic);
-			const keywordsInThisNote = tokens.filter(token => token[1] == '名詞' && token[8] != null);
+			const keywordsInThisNote = tokens.filter(token => token[2] == '固有名詞' && token[8] != null);
 			keywords = keywords.concat(keywordsInThisNote);
 		}
 
