@@ -669,10 +669,10 @@
   dependencies:
     "@types/koa" "*"
 
-"@types/lokijs@1.5.4":
-  version "1.5.4"
-  resolved "https://registry.yarnpkg.com/@types/lokijs/-/lokijs-1.5.4.tgz#3723d92b88ebb6130378361c0baf2dba24ab4496"
-  integrity sha512-yA/lGTojLlt/M2xpPS5+rBYUB+ZW0NnZAeqSP7Hg77pcU+B2zagr9sgf0vHG8Gl3z/EH9xLCYRbZIOxRkicGnA==
+"@types/lokijs@1.5.5":
+  version "1.5.5"
+  resolved "https://registry.yarnpkg.com/@types/lokijs/-/lokijs-1.5.5.tgz#bae743a9ae24d1a106b8291c31ab1e1ad28e00d2"
+  integrity sha512-TAvlc6vfYZnQVqPBVF3ITE33aSomqRLHOsZb5u1jQdmQxvj+LOLgbt8VaAJh85Tx7xXdWcsdeEO13i6TQBfV+w==
 
 "@types/mime@*":
   version "2.0.3"
