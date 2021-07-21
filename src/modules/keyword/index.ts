@@ -44,13 +44,14 @@ export default class extends Module {
 
 		const interestedNotes = tl.filter(note =>
 			note.userId !== this.ai.account.id &&
-			note.text != null &&
+			note.text != null && note.text.length > 10 &&
 			note.cw == null);
 
 		let keywords: string[][] = [];
 
 		for (const note of interestedNotes) {
 			const tokens = await mecab(note.text, config.mecab, config.mecabDic);
+			if (tokens.length < 5) continue;
 			const keywordsInThisNote = tokens.filter(token => token[2] == '固有名詞' && token[8] != null);
 			keywords = keywords.concat(keywordsInThisNote);
 		}
