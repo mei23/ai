@@ -711,10 +711,10 @@
   dependencies:
     "@types/koa" "*"
 
-"@types/lokijs@1.5.5":
-  version "1.5.5"
-  resolved "https://registry.yarnpkg.com/@types/lokijs/-/lokijs-1.5.5.tgz#bae743a9ae24d1a106b8291c31ab1e1ad28e00d2"
-  integrity sha512-TAvlc6vfYZnQVqPBVF3ITE33aSomqRLHOsZb5u1jQdmQxvj+LOLgbt8VaAJh85Tx7xXdWcsdeEO13i6TQBfV+w==
+"@types/lokijs@1.5.6":
+  version "1.5.6"
+  resolved "https://registry.yarnpkg.com/@types/lokijs/-/lokijs-1.5.6.tgz#ca011ade58c6a41221cbeae3e26b6b769a20589e"
+  integrity sha512-hQBM/riu+/a6z9Tnv/sK8dpnGHog5q8HXritjUOP62VoZ4cauPQrGV0hGoZIHg76Xk1lnYHIQb5AVhFaDsMRkg==
 
 "@types/mime@*":
   version "2.0.3"
