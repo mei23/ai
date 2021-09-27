@@ -16,7 +16,7 @@
 		"@types/seedrandom": "3.0.1",
 		"@types/twemoji-parser": "13.1.1",
 		"@types/uuid": "8.3.1",
-		"@types/ws": "7.4.7",
+		"@types/ws": "8.2.0",
 		"autobind-decorator": "2.4.0",
 		"canvas": "2.8.0",
 		"chalk": "4.1.2",
