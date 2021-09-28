@@ -42,7 +42,7 @@
 		"@types/koa": "2.13.4",
 		"@types/koa__router": "8.0.7",
 		"@types/websocket": "1.0.4",
-		"jest": "26.6.3",
+		"jest": "27.2.2",
 		"koa": "2.13.1",
 		"koa-json-body": "5.3.0",
 		"ts-jest": "26.5.6",
