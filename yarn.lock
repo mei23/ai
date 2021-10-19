@@ -939,10 +939,10 @@
   dependencies:
     "@types/koa" "*"
 
-"@types/lokijs@1.5.5":
-  version "1.5.5"
-  resolved "https://registry.yarnpkg.com/@types/lokijs/-/lokijs-1.5.5.tgz#bae743a9ae24d1a106b8291c31ab1e1ad28e00d2"
-  integrity sha512-TAvlc6vfYZnQVqPBVF3ITE33aSomqRLHOsZb5u1jQdmQxvj+LOLgbt8VaAJh85Tx7xXdWcsdeEO13i6TQBfV+w==
+"@types/lokijs@1.5.7":
+  version "1.5.7"
+  resolved "https://registry.yarnpkg.com/@types/lokijs/-/lokijs-1.5.7.tgz#5eb4b189149681a89acad6dc8adb088f6025feb3"
+  integrity sha512-WEFQLgO3u2Wa7yFybqkTZYumqF1GcHvUwx8Tv2SUHy2qpnIainMMoLmEUGdjhPNp/v5pyC9e91fSMC3mkxBIDw==
 
 "@types/mime@*":
   version "2.0.3"
