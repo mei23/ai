@@ -6,7 +6,7 @@ import * as loki from 'lokijs';
 import fetch from 'node-fetch';
 import * as FormData from 'form-data';
 import * as chalk from 'chalk';
-import { v4 as uuid } from 'uuid';
+import * as crypto from 'crypto';
 const delay = require('timeout-as-promise');
 
 import config from '@/config';
@@ -468,7 +468,7 @@ export default class 藍 {
 	 */
 	@autobind
 	public setTimeoutWithPersistence(module: Module, delay: number, data?: any) {
-		const id = uuid();
+		const id = crypto.randomUUID();
 		this.timers.insertOne({
 			id: id,
 			module: module.name,

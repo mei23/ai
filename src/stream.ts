@@ -3,7 +3,7 @@ import { EventEmitter } from 'events';
 import * as WebSocket from 'ws';
 const ReconnectingWebsocket = require('reconnecting-websocket');
 import config from './config';
-import { v4 as uuid } from 'uuid';
+import * as crypto from 'crypto';
 
 /**
  * Misskey stream connection
@@ -165,7 +165,7 @@ export default class Stream extends EventEmitter {
 		const d = {
 			type: 'api',
 			body: {
-				id: id || uuid(),
+				id: id || crypto.randomUUID(),
 				endpoint,
 				data
 			}
