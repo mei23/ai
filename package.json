@@ -27,7 +27,7 @@
 		"misskey-reversi": "0.0.5",
 		"module-alias": "2.2.2",
 		"neologd-normalizer": "0.0.3",
-		"node-fetch": "2.6.8",
+		"node-fetch": "2.6.9",
 		"promise-retry": "2.0.1",
 		"random-seed": "0.3.0",
 		"reconnecting-websocket": "4.4.0",
