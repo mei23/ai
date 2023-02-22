@@ -17,7 +17,7 @@
 		"@types/random-seed": "0.3.3",
 		"@types/seedrandom": "3.0.4",
 		"@types/twemoji-parser": "13.1.1",
-		"@types/uuid": "9.0.0",
+		"@types/uuid": "9.0.1",
 		"@types/ws": "8.5.4",
 		"autobind-decorator": "2.4.0",
 		"canvas": "2.11.0",
