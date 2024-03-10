@@ -1,4 +1,4 @@
-FROM node:16.18.1-bullseye
+FROM node:18.19.1-bullseye
 
 RUN apt-get update
 RUN apt-get install -y build-essential mecab libmecab-dev mecab-ipadic-utf8 sudo git make curl xz-utils file fonts-noto
