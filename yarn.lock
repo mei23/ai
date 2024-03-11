@@ -116,10 +116,10 @@
   resolved "https://registry.yarnpkg.com/@types/seedrandom/-/seedrandom-3.0.5.tgz#31fb257427742a9cc33fcf0c25dacca92e8f45a1"
   integrity sha512-kopEpYpFQvQdYsZkZVwht/0THHmTFFYXDaqV/lM45eweJ8kcGVDgZHs0RVTolSq55UPZNmjhKc9r7UvLu/mQQg==
 
-"@types/twemoji-parser@13.1.1":
-  version "13.1.1"
-  resolved "https://registry.yarnpkg.com/@types/twemoji-parser/-/twemoji-parser-13.1.1.tgz#71e8a30cc542c51a893ee6583c401b56ad605b9f"
-  integrity sha512-KhGr5xLxf8XCITgMMG8CIHpnZ5EzbVFPmStoEPd6KqtX7Lc7pc7OZyicfcWJgPv68lq/+y52zu+S5A58oOdVJw==
+"@types/twemoji-parser@13.1.4":
+  version "13.1.4"
+  resolved "https://registry.yarnpkg.com/@types/twemoji-parser/-/twemoji-parser-13.1.4.tgz#b8dd8b4f8a9b003b5029472280f3e4cd71826515"
+  integrity sha512-pDZcn6irxV/CD8C9cAEyZeECKFGZud8R5Zvs9PLO+5361GXu8khZ2peEwidMwq1dqYFSAbSQCUNkWDl87DsX2g==
 
 "@types/uuid@9.0.1":
   version "9.0.1"
