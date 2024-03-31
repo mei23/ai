@@ -74,10 +74,10 @@
   dependencies:
     chalk "*"
 
-"@types/lokijs@1.5.8":
-  version "1.5.8"
-  resolved "https://registry.yarnpkg.com/@types/lokijs/-/lokijs-1.5.8.tgz#0c365744f6e473ac6e9a6d8b174649b6ef85f47d"
-  integrity sha512-HN4vmoYHqF0mx91Cci6xaH1uN1JAMbakqNFXggpbd2L/RTUMrvx//dJTJehEtEF+a/qXfLbVSeO6p3Oegx/hDg==
+"@types/lokijs@1.5.14":
+  version "1.5.14"
+  resolved "https://registry.yarnpkg.com/@types/lokijs/-/lokijs-1.5.14.tgz#bf7efc825b8ac763676eedcf4df35f553733f511"
+  integrity sha512-4Fic47BX3Qxr8pd12KT6/T1XWU8dOlJBIp1jGoMbaDbiEvdv50rAii+B3z1b/J2pvMywcVP+DBPGP5/lgLOKGA==
 
 "@types/node-fetch@2.6.11":
   version "2.6.11"
