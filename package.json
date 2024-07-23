@@ -34,7 +34,7 @@
 		"timeout-as-promise": "1.0.0",
 		"ts-node": "10.9.2",
 		"@twemoji/parser": "15.1.1",
-		"typescript": "5.4.5",
+		"typescript": "5.5.4",
 		"ws": "8.17.0"
 	},
 	"_moduleAliases": {
