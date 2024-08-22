@@ -11,7 +11,7 @@
 	"dependencies": {
 		"@types/chalk": "2.2.0",
 		"@types/lokijs": "1.5.14",
-		"@types/node": "20.12.12",
+		"@types/node": "22.5.0",
 		"@types/node-fetch": "2.6.11",
 		"@types/promise-retry": "1.1.6",
 		"@types/random-seed": "0.3.5",
