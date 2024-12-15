@@ -17,7 +17,7 @@
 		"@types/random-seed": "0.3.5",
 		"@types/seedrandom": "3.0.8",
 		"@types/uuid": "10.0.0",
-		"@types/ws": "8.5.10",
+		"@types/ws": "8.5.13",
 		"autobind-decorator": "2.4.0",
 		"canvas": "2.11.2",
 		"chalk": "4.1.2",
@@ -35,7 +35,7 @@
 		"ts-node": "10.9.2",
 		"@twemoji/parser": "15.1.1",
 		"typescript": "5.5.4",
-		"ws": "8.17.0"
+		"ws": "8.18.0"
 	},
 	"_moduleAliases": {
 		"@": "built"
