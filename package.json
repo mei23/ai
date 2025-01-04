@@ -1,5 +1,5 @@
 {
-	"_v": "1.7.0-ia",
+	"_v": "1.8.0-ia",
 	"main": "./built/index.js",
 	"engines": {
 		"node": ">=14.17.0"
