@@ -1,8 +1,8 @@
 {
 	"_v": "1.7.0-ia",
 	"main": "./built/index.js",
-	"engines" : {
-		"node" : ">=14.17.0" 
+	"engines" : { 
+		"node" : ">=14.17.0"
 	},
 	"scripts": {
 		"start": "node ./built",
