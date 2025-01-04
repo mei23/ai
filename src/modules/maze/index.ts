@@ -19,7 +19,19 @@ export default class extends Module {
 	}
 
 	@autobind
+	private async isAvail(): Promise<boolean> {
+		try {
+			// @ts-ignore
+			const { createCanvas } = await import('canvas');
+			return true;
+		} catch (e) {
+			return false
+		}
+	}
+
+	@autobind
 	private async post() {
+		if (await this.isAvail() !== true) return;
 		const now = new Date();
 		if (now.getHours() !== 22) return;
 		const date = `${now.getFullYear()}-${now.getMonth()}-${now.getDate()}`;
@@ -44,7 +56,7 @@ export default class extends Module {
 		const maze = genMaze(seed, size);
 
 		this.log('Maze rendering...');
-		const data = renderMaze(seed, maze);
+		const data = await renderMaze(seed, maze);
 
 		this.log('Image uploading...');
 		const file = await this.ai.upload(data, {
@@ -58,6 +70,10 @@ export default class extends Module {
 	@autobind
 	private async mentionHook(msg: Message) {
 		if (msg.includes(['迷路'])) {
+			if (await this.isAvail() !== true) {
+				msg.reply(serifs.maze.nocanvas);
+				return true;
+			}
 			let size: string | null = null;
 			if (msg.includes(['接待'])) size = 'veryEasy';
 			if (msg.includes(['簡単', 'かんたん', '易しい', 'やさしい', '小さい', 'ちいさい'])) size = 'easy';

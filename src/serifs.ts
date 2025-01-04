@@ -373,12 +373,14 @@ export default {
 
 	maze: {
 		post: '今日の迷路ですよ！ #AiMaze',
-		foryou: '描きましたよ！'
+		foryou: '描きましたよ！',
+		nocanvas: '失敗しちゃいました。この環境ではcanvasが使えないみたいです。'
 	},
 
 	chart: {
 		post: 'インスタンスの投稿数ですよ！',
-		foryou: '描きましたよ！'
+		foryou: '描きましたよ！',
+		nocanvas: '失敗しちゃいました。この環境ではcanvasが使えないみたいです。'
 	},
 
 	sleepReport: {
