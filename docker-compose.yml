@@ -6,7 +6,19 @@ services:
     restart: always
     environment:
       FC_LANG: ja
+      #FC_LANG: zh_CN
+      #FC_LANG: zh_TW
       TZ: Asia/Tokyo
+      #TZ: Asia/Kamchatka
+      #TZ: Asia/Seoul
+      #TZ: Asia/Pyongyang
+      #TZ: Asia/Shanghai
+      #TZ: Asia/Taipei
+      #TZ: America/New_York
+      #TZ: America/Chicago
+      #TZ: America/Los_Angeles
+      #TZ: UTC
+      #TZ: Europe/London
     volumes:
       - ./config.json:/ai/config.json:ro
       - ./memory:/ai/memory

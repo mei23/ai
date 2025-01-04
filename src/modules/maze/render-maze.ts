@@ -1,5 +1,4 @@
 import * as gen from 'random-seed';
-import { createCanvas } from 'canvas';
 
 import { CellType } from './maze';
 import { themes } from './themes';
@@ -8,12 +7,14 @@ const imageSize = 4096; // px
 const margin = 96 * 4;
 const mazeAreaSize = imageSize - (margin * 2);
 
-export function renderMaze(seed, maze: CellType[][]) {
+export async function renderMaze(seed, maze: CellType[][]) {
 	const rand = gen.create(seed);
 	const mazeSize = maze.length;
 
 	const colors = themes[rand(themes.length)];
 
+	// @ts-ignore
+	const { createCanvas } = await import('canvas'); 
 	const canvas = createCanvas(imageSize, imageSize);
 	const ctx = canvas.getContext('2d');
 	ctx.antialias = 'none';
