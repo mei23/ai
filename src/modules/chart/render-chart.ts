@@ -1,5 +1,3 @@
-import { createCanvas, registerFont } from 'canvas';
-
 const width = 1024 + 256;
 const height = 512 + 256;
 const margin = 128;
@@ -31,7 +29,10 @@ type Chart = {
 	}[];
 };
 
-export function renderChart(chart: Chart) {
+export async function renderChart(chart: Chart) {
+	// @ts-ignore
+	const { createCanvas, registerFont } = await import('canvas');
+
 	try {
 		registerFont('./font.ttf', { family: 'CustomFont' });
 	} catch {

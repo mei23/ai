@@ -22,7 +22,19 @@ export default class extends Module {
 	}
 
 	@autobind
+	private async isAvail(): Promise<boolean> {
+		try {
+			// @ts-ignore
+			const { createCanvas, registerFont } = await import('canvas');
+			return true;
+		} catch (e) {
+			return false
+		}
+	}
+
+	@autobind
 	private async post() {
+		if (await this.isAvail() !== true) return;
 		const now = new Date();
 		if (now.getUTCHours() !== 1) return;
 		const date = `${now.getUTCFullYear()}-${now.getUTCMonth()}-${now.getUTCDate()}`;
@@ -117,7 +129,7 @@ export default class extends Module {
 		}
 
 		this.log('Chart rendering...');
-		const img = renderChart(chart);
+		const img = await renderChart(chart);
 
 		this.log('Image uploading...');
 		const file = await this.ai.upload(img, {
@@ -134,6 +146,11 @@ export default class extends Module {
 			return false;
 		} else {
 			this.log('Chart requested');
+		}
+
+		if (await this.isAvail() !== true) {
+			msg.reply(serifs.chart.nocanvas);
+			return true;
 		}
 
 		let type = 'random';
