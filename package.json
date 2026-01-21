@@ -37,7 +37,7 @@
 		"ws": "8.18.0"
 	},
 	"optionalDependencies": {
-		"canvas": "3.0.1"
+		"canvas": "3.2.1"
 	},
 	"_moduleAliases": {
 		"@": "built"
