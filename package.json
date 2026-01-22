@@ -9,7 +9,7 @@
 		"build": "tsc"
 	},
 	"dependencies": {
-		"@twemoji/parser": "15.1.1",
+		"@twemoji/parser": "16.0.0",
 		"@types/chalk": "2.2.0",
 		"@types/lokijs": "1.5.14",
 		"@types/node": "22.10.5",
