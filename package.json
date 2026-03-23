@@ -33,7 +33,7 @@
 		"timeout-as-promise": "1.0.0",
 		"ts-node": "10.9.2",
 		"typescript": "5.9.3",
-		"ws": "8.19.0"
+		"ws": "8.20.0"
 	},
 	"optionalDependencies": {
 		"canvas": "3.2.1"
